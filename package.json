@@ -1,0 +1,53 @@
+{
+  "name": "vue-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && npm run build:client && npm run build:server",
+    "build:client": "webpack --config build/webpack.client.config.js --progress --hide-modules",
+    "build:server": "webpack --config build/webpack.server.config.js --progress --hide-modules",
+    "serve": "node --inspect src/server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "build",
+        "src"
+      ],
+      "extensions": "js,html,vue",
+      "quiet": true
+    },
+    "serve": {
+      "patterns": [
+        "dist/vue-ssr-server-bundle.json"
+      ],
+      "extensions": "json",
+      "quiet": true
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.15.3",
+    "vue": "2.4.2",
+    "vue-server-renderer": "2.4.2",
+    "vuex": "2.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "6.25.0",
+    "babel-loader": "7.1.1",
+    "css-loader": "0.28.4",
+    "friendly-errors-webpack-plugin": "1.6.1",
+    "npm-watch": "0.2.0",
+    "rimraf": "2.6.1",
+    "vue-loader": "13.0.2",
+    "vue-router": "2.7.0",
+    "vue-template-compiler": "2.4.2",
+    "webpack": "3.4.1",
+    "webpack-merge": "4.1.0",
+    "webpack-node-externals": "1.6.0"
+  }
+}
