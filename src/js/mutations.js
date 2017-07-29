@@ -1,5 +1,3 @@
-import Vue from 'vue';
-
 const mutations = {
     SET_DATA: 'SET_DATA',
 };

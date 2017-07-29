@@ -7,16 +7,20 @@ module.exports = {
     },
     env: {
         browser: true,
-        jasmine: true,
     },
     extends: 'airbnb-base',
-    // required to lint *.vue files
     plugins: [
-        'jest',
+        // required to lint *.vue files
+        'html',
     ],
     globals: {
-        jest: true,
-        test: true,
+    },
+    settings: {
+        'import/resolver': {
+            'webpack': {
+                'config': 'build/webpack.client.config.js',
+            },
+        },
     },
     // add your custom rules here
     rules: {

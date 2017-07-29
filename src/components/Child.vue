@@ -21,10 +21,10 @@ import mutations from '@src/js/mutations';
 const SET_DATA = mutations.mutations.SET_DATA;
 
 export default {
-    name: 'home',
+    name: 'child',
     // Fetch any async data needed to render this component on the server
-    fetchData({ store, route }) {
-        return new Promise(resolve => {
+    fetchData({ store }) {
+        return new Promise((resolve) => {
             setTimeout(() => {
                 const data = 'Child data from the server';
                 store.commit(SET_DATA, { data });

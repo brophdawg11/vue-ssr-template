@@ -3,7 +3,7 @@ const actions = {
 };
 
 const handlers = {
-    [actions.SAMPLE]({ commit, state }) {
+    [actions.SAMPLE](/* { commit, state } */) {
     },
 };
 
